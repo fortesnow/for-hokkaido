@@ -1,0 +1,129 @@
+{
+  "navigation": {
+    "home": "Home",
+    "vacation": "Vacation Photography",
+    "couple": "Couple & Proposal",
+    "prewedding": "Pre-wedding",
+    "destinations": "Destinations",
+    "gallery": "Gallery",
+    "pricing": "Pricing",
+    "booking": "Book Now",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "contactUs": "Contact Us",
+    "viewGallery": "View Gallery",
+    "chooseYourDestination": "Choose Your Destination",
+    "getQuote": "Get Quote",
+    "hours": "hours",
+    "from": "From",
+    "yen": "¥",
+    "usd": "$"
+  },
+  "home": {
+    "hero": {
+      "title": "Four Season Photography in HOKKAIDO",
+      "subtitle": "Capture your precious moments with the stunning beauty of Hokkaido's changing seasons",
+      "cta": "Choose Your Destination"
+    },
+    "seasons": {
+      "title": "Four Seasons of Hokkaido",
+      "subtitle": "Experience the unique beauty of each season",
+      "spring": {
+        "title": "Spring",
+        "description": "Cherry blossoms and fresh greenery create a romantic atmosphere"
+      },
+      "summer": {
+        "title": "Summer",
+        "description": "Lavender fields and clear blue skies for vibrant photography"
+      },
+      "autumn": {
+        "title": "Autumn",
+        "description": "Golden leaves and warm colors paint the perfect backdrop"
+      },
+      "winter": {
+        "title": "Winter",
+        "description": "Snow-covered landscapes create magical winter wonderland scenes"
+      }
+    },
+    "services": {
+      "title": "Photography Services",
+      "vacation": {
+        "title": "Vacation Photography",
+        "description": "Capture your family vacation memories with professional photography",
+        "features": ["Family Photos", "Solo Travel", "Group Photos"]
+      },
+      "couple": {
+        "title": "Couple & Proposal",
+        "description": "Romantic photography sessions and surprise proposal planning",
+        "features": ["Romantic Shoots", "Proposal Planning", "Engagement Photos"]
+      },
+      "prewedding": {
+        "title": "Pre-wedding",
+        "description": "Traditional and modern pre-wedding photography in stunning locations",
+        "features": ["Traditional Kimono", "Modern Style", "Multiple Locations"]
+      }
+    },
+    "about": {
+      "title": "About SHIKI Photography",
+      "description": "We are local photographers passionate about capturing the beauty of Hokkaido's four seasons. With deep knowledge of the best locations and perfect timing, we help you create unforgettable memories.",
+      "whyUs": {
+        "title": "Why Choose Us?",
+        "local": {
+          "title": "Local Expertise",
+          "description": "Deep knowledge of Hokkaido's best photography locations and seasonal timing"
+        },
+        "multilingual": {
+          "title": "Multilingual Support",
+          "description": "Professional service in both English and Japanese"
+        },
+        "seasonal": {
+          "title": "Seasonal Specialists",
+          "description": "Expert guidance on the best times and locations for each season"
+        }
+      }
+    }
+  },
+  "destinations": {
+    "title": "Photography Destinations",
+    "subtitle": "Discover the most beautiful photography locations in Hokkaido",
+    "regions": {
+      "sapporo": "Sapporo",
+      "otaru": "Otaru",
+      "furano": "Furano",
+      "biei": "Biei",
+      "niseko": "Niseko",
+      "shikotsu": "Lake Shikotsu",
+      "akan": "Lake Akan"
+    }
+  },
+  "booking": {
+    "title": "Book Your Photography Session",
+    "subtitle": "Tell us about your vision and we'll help you create the perfect photos",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "preferredDate": "Preferred Date",
+      "alternativeDate": "Alternative Date",
+      "numberOfPeople": "Number of People",
+      "sessionType": "Session Type",
+      "location": "Preferred Location",
+      "language": "Preferred Language",
+      "specialRequests": "Special Requests",
+      "submit": "Submit Request"
+    }
+  },
+  "footer": {
+    "company": "SHIKI Photography HOKKAIDO",
+    "description": "Professional photography services capturing the beauty of Hokkaido's four seasons",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Information",
+    "followUs": "Follow Us",
+    "copyright": "© 2024 SHIKI Photography HOKKAIDO. All rights reserved."
+  }
+}

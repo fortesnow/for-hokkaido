@@ -1,0 +1,129 @@
+{
+  "navigation": {
+    "home": "ホーム",
+    "vacation": "バケーション撮影",
+    "couple": "カップル・プロポーズ",
+    "prewedding": "前撮り",
+    "destinations": "撮影地",
+    "gallery": "ギャラリー",
+    "pricing": "料金",
+    "booking": "予約する",
+    "about": "私たちについて",
+    "faq": "よくある質問",
+    "contact": "お問い合わせ"
+  },
+  "common": {
+    "learnMore": "詳しく見る",
+    "bookNow": "今すぐ予約",
+    "contactUs": "お問い合わせ",
+    "viewGallery": "ギャラリーを見る",
+    "chooseYourDestination": "撮影地を選ぶ",
+    "getQuote": "見積もりを取る",
+    "hours": "時間",
+    "from": "〜",
+    "yen": "¥",
+    "usd": "$"
+  },
+  "home": {
+    "hero": {
+      "title": "北海道四季フォトグラフィー",
+      "subtitle": "北海道の美しい四季とともに、あなたの大切な瞬間を写真に残しませんか",
+      "cta": "撮影地を選ぶ"
+    },
+    "seasons": {
+      "title": "北海道の四季",
+      "subtitle": "それぞれの季節の美しさを体験してください",
+      "spring": {
+        "title": "春",
+        "description": "桜と新緑がロマンチックな雰囲気を演出します"
+      },
+      "summer": {
+        "title": "夏",
+        "description": "ラベンダー畑と青空が鮮やかな写真を彩ります"
+      },
+      "autumn": {
+        "title": "秋",
+        "description": "黄金の紅葉が完璧な背景を作り出します"
+      },
+      "winter": {
+        "title": "冬",
+        "description": "雪化粧した風景が魔法のような冬の世界を創造します"
+      }
+    },
+    "services": {
+      "title": "撮影サービス",
+      "vacation": {
+        "title": "バケーション撮影",
+        "description": "家族旅行の思い出をプロの写真で残しませんか",
+        "features": ["家族写真", "一人旅", "グループ写真"]
+      },
+      "couple": {
+        "title": "カップル・プロポーズ",
+        "description": "ロマンチックな撮影セッションとサプライズプロポーズの企画",
+        "features": ["ロマンチック撮影", "プロポーズ企画", "婚約写真"]
+      },
+      "prewedding": {
+        "title": "前撮り",
+        "description": "美しいロケーションでの和装・洋装前撮り撮影",
+        "features": ["和装撮影", "洋装撮影", "複数ロケーション"]
+      }
+    },
+    "about": {
+      "title": "SHIKI Photography について",
+      "description": "私たちは北海道の四季の美しさを撮影することに情熱を注ぐ地元のフォトグラファーです。最高のロケーションと完璧なタイミングの深い知識で、忘れられない思い出の創造をお手伝いします。",
+      "whyUs": {
+        "title": "選ばれる理由",
+        "local": {
+          "title": "地元の専門知識",
+          "description": "北海道の最高の撮影地と季節のタイミングに関する深い知識"
+        },
+        "multilingual": {
+          "title": "多言語対応",
+          "description": "英語と日本語での専門的なサービス"
+        },
+        "seasonal": {
+          "title": "四季の専門家",
+          "description": "各季節の最適な時期と場所に関する専門的なガイダンス"
+        }
+      }
+    }
+  },
+  "destinations": {
+    "title": "撮影地",
+    "subtitle": "北海道で最も美しい撮影スポットを発見してください",
+    "regions": {
+      "sapporo": "札幌",
+      "otaru": "小樽",
+      "furano": "富良野",
+      "biei": "美瑛",
+      "niseko": "ニセコ",
+      "shikotsu": "支笏湖",
+      "akan": "阿寒湖"
+    }
+  },
+  "booking": {
+    "title": "撮影セッションを予約する",
+    "subtitle": "あなたのビジョンをお聞かせください。完璧な写真の撮影をお手伝いします",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "preferredDate": "希望日",
+      "alternativeDate": "代替日",
+      "numberOfPeople": "人数",
+      "sessionType": "撮影タイプ",
+      "location": "希望撮影地",
+      "language": "希望言語",
+      "specialRequests": "特別なご要望",
+      "submit": "リクエストを送信"
+    }
+  },
+  "footer": {
+    "company": "SHIKI Photography HOKKAIDO",
+    "description": "北海道の四季の美しさを捉えるプロフェッショナル写真サービス",
+    "quickLinks": "クイックリンク",
+    "contact": "連絡先",
+    "followUs": "フォローしてください",
+    "copyright": "© 2024 SHIKI Photography HOKKAIDO. All rights reserved."
+  }
+}
