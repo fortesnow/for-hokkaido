@@ -1,39 +1,54 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
-import { motion } from 'framer-motion';
-import { Heart, Sparkles, Camera, MapPin, Star } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Heart, Sparkles, Camera, MapPin, Star, Check } from 'lucide-react';
 
 export default function PreweddingPage() {
+  // ヒーロー画像のカルーセル
+  const heroImages = [
+    '/images/hakodate_wedding_kimono.webp',
+    '/images/otaru_wedding.webp',
+    '/images/sapporo_wedding_summer.webp',
+    '/images/niseko_wedding_winter.webp',
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // 自動カルーセル
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   const services = [
     {
-      icon: Heart,
-      title: 'Traditional Kimono',
-      description: 'Beautiful traditional Japanese kimono rental and styling for authentic pre-wedding photos',
-      features: ['Professional kimono fitting', 'Hair and makeup included', 'Traditional accessories', 'Multiple kimono options'],
-      color: 'text-red-600',
-      bgColor: 'bg-red-50',
+      title: 'ローカルの強み',
+      description: '素敵なロケーションをご案内します',
     },
     {
-      icon: Sparkles,
-      title: 'Modern Western Style',
-      description: 'Contemporary wedding dress and suit photography in stunning Hokkaido locations',
-      features: ['Wedding dress consultation', 'Professional styling', 'Modern posing guidance', 'Elegant compositions'],
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
+      title: 'The best wedding photographers',
+      description: 'が撮ります',
     },
     {
-      icon: Camera,
-      title: 'Mixed Style Session',
-      description: 'Combine both traditional and modern elements for a comprehensive pre-wedding experience',
-      features: ['Multiple outfit changes', 'Various location setups', 'Cultural fusion themes', 'Extended session time'],
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
+      title: 'top ブライダル make up artist',
+      description: 'が担当します',
+    },
+    {
+      title: 'ローカルのドレスショップ',
+      description: 'の衣装を選べます',
+    },
+    {
+      title: '着物スタイル',
+      description: 'もできます',
     },
   ];
 
@@ -64,55 +79,117 @@ export default function PreweddingPage() {
     },
   ];
 
+  // ギャラリー画像データ
+  const galleryImages = [
+    '/images/hakodate_wedding_kimono.webp',
+    '/images/otaru_wedding.webp',
+    '/images/sapporo_wedding_summer.webp',
+    '/images/niseko_wedding_winter.webp',
+    '/images/hakodate_proposal.webp',
+    '/images/sapporo_snow_wedding.webp',
+    '/images/couple_hakodate.webp',
+    '/images/niseko_snow_landscape_couple.webp',
+    '/images/couple_spring_cherry_blossom.webp',
+    '/images/winter_couple.webp',
+    '/images/couple_hakodate_2.webp',
+    '/images/couple_hakodate_3.webp',
+  ];
+
   const packages = [
     {
-      name: 'Essential Package',
-      price: '¥65,000',
-      priceUsd: '$470',
+      name: 'Photography package',
+      price: '¥45,000',
+      priceUsd: '$330',
+      duration: '2 hours',
+      features: [
+        '50+ edited photos',
+        '1 location',
+        'Basic editing',
+        'Online gallery',
+        '72-hour delivery',
+      ],
+    },
+    {
+      name: 'Photo+Hair&Make-up package',
+      price: '¥75,000',
+      priceUsd: '$550',
       duration: '3 hours',
       features: [
         '80+ edited photos',
         '1-2 locations',
-        'One outfit style',
-        'Basic makeup consultation',
+        'Professional hair & makeup',
+        'Basic editing',
         'Online gallery',
         '48-hour delivery',
       ],
     },
     {
-      name: 'Premium Package',
+      name: 'Photo+Hair&Make-up+Rental Dress or Kimono package',
       price: '¥95,000',
       priceUsd: '$690',
-      duration: '5 hours',
+      duration: '4 hours',
       popular: true,
       features: [
-        '150+ edited photos',
+        '100+ edited photos',
         '2-3 locations',
-        'Two outfit styles',
-        'Professional makeup & hair',
-        'Kimono rental included',
+        'Professional hair & makeup',
+        'Dress or kimono rental',
+        'Premium editing',
+        'Online gallery',
         'Same-day preview',
         '24-hour delivery',
-        'Print package',
       ],
     },
+  ];
+
+  const optionalServices = [
     {
-      name: 'Luxury Package',
-      price: '¥140,000',
-      priceUsd: '$1,020',
-      duration: '8 hours',
-      features: [
-        '250+ edited photos',
-        '3-4 locations',
-        'Multiple outfit changes',
-        'Full-day styling team',
-        'Premium kimono selection',
-        'Transportation included',
-        'Same-day preview',
-        '12-hour delivery',
-        'Premium print album',
-        'USB with high-res images',
-      ],
+      name: '追加ロケーション',
+      price: '¥15,000',
+      priceUsd: '$110',
+      description: '1箇所追加あたり',
+    },
+    {
+      name: '追加撮影時間',
+      price: '¥10,000',
+      priceUsd: '$75',
+      description: '1時間あたり',
+    },
+    {
+      name: '札幌・小樽圏外出張費',
+      price: '¥5,000',
+      priceUsd: '$40',
+      description: '片道あたり',
+    },
+    {
+      name: '函館・ニセコ圏外出張費',
+      price: '¥10,000',
+      priceUsd: '$75',
+      description: '片道あたり',
+    },
+    {
+      name: '追加衣装レンタル',
+      price: '¥20,000',
+      priceUsd: '$150',
+      description: 'ドレスまたは着物1着あたり',
+    },
+    {
+      name: 'ヘアメイクアーティスト指名料',
+      price: '¥15,000',
+      priceUsd: '$110',
+      description: 'トップスタイリスト指名時',
+    },
+    {
+      name: 'プレミアムレタッチ',
+      price: '¥5,000',
+      priceUsd: '$40',
+      description: '1カットあたり',
+    },
+    {
+      name: '当日スナップ写真',
+      price: '¥10,000',
+      priceUsd: '$75',
+      description: '挙式・披露宴の撮影',
     },
   ];
 
@@ -120,46 +197,87 @@ export default function PreweddingPage() {
     <main className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      {/* Hero Section - Carousel */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background Carousel */}
         <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2070&auto=format&fit=crop')"
-            }}
-          />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentImageIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: `url('${heroImages[currentImageIndex]}')`
+              }}
+            />
+          </AnimatePresence>
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Pre-wedding Photography
-            </h1>
-            
-            <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-              Celebrate your love story with beautiful pre-wedding photography in Hokkaido&apos;s most romantic locations
-            </p>
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-white"
+            >
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+                Pre-wedding Photography
+              </h1>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/booking">
-                <Button size="lg" className="text-lg px-8 py-6 h-auto">
-                  Book Your Session
-                </Button>
-              </Link>
-              <Link href="/gallery">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto bg-white/10 border-white/30 text-white hover:bg-white/20">
-                  View Gallery
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
+              <p className="text-lg md:text-xl mb-8 max-w-2xl leading-relaxed">
+                美しい自然の景色の中でドレスや着物を着て撮影できます。
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/booking">
+                  <Button size="lg" className="text-lg px-8 py-6 h-auto">
+                    Book Now
+                  </Button>
+                </Link>
+                <Link href="/gallery">
+                  <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto bg-white/10 border-white/30 text-white hover:bg-white/20">
+                    View Gallery
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Image Caption */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-center lg:text-left"
+            >
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                  Pre-wedding Photography Styles
+                </h3>
+                <p className="text-white/90 leading-relaxed">
+                  美しい自然の景色の中でドレスや着物を着て撮影できます。
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Image indicators */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -174,50 +292,39 @@ export default function PreweddingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Pre-wedding Photography Styles
+              Why choose our wedding photography sessions
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Choose from traditional, modern, or mixed style photography sessions
+              ローカルの強みで素敵なロケーションをご案内します
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -10 }}
-                >
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md">
-                    <CardHeader className="text-center">
-                      <div className={`w-16 h-16 mx-auto mb-4 rounded-full ${service.bgColor} flex items-center justify-center`}>
-                        <Icon className={`h-8 w-8 ${service.color}`} />
-                      </div>
-                      <CardTitle className="text-xl">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="group"
+              >
+                <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md text-center">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <Check className="h-8 w-8 mx-auto text-green-600 mb-2" />
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         {service.description}
                       </p>
-                      
-                      <div className="space-y-2">
-                        {service.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-sm">
-                            <div className={`w-1.5 h-1.5 rounded-full ${service.color.replace('text-', 'bg-')}`} />
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -274,6 +381,59 @@ export default function PreweddingPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              ギャラリー
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              私たちのプレウェディングフォトグラフィーの作品をご覧ください
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galleryImages.map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                <div className="aspect-square bg-cover bg-center"
+                     style={{ backgroundImage: `url('${image}')` }}>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Link href="/gallery">
+              <Button size="lg" className="text-lg px-8 py-6 h-auto">
+                すべてのギャラリーを見る
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -354,6 +514,73 @@ export default function PreweddingPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Optional Services Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              オプション料金
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              必要に応じて追加できるオプションサービス
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {optionalServices.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="group"
+              >
+                <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+                  <CardContent className="p-6 text-center">
+                    <div className="mb-4">
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
+                        {service.name}
+                      </h3>
+                      <div className="text-2xl font-bold text-primary mb-1">
+                        {service.price}
+                      </div>
+                      <div className="text-sm text-muted-foreground mb-3">
+                        {service.priceUsd}
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Link href="/booking">
+              <Button size="lg" className="text-lg px-8 py-6 h-auto">
+                今すぐ予約する
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
