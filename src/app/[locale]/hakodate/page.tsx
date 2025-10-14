@@ -10,17 +10,6 @@ import { motion } from 'framer-motion';
 import { MapPin, Camera, Heart, Sparkles } from 'lucide-react';
 
 export default function HakodatePage() {
-  // TODO: 実際の画像ファイルが配置されたら以下のコメントアウトを解除
-  // const heroImage = '/images/cities/hakodate-hero.webp';
-  // const galleryImages = [
-  //   '/images/gallery/hakodate-wedding-kimono.webp',
-  //   '/images/gallery/hakodate-proposal.webp',
-  //   '/images/gallery/hakodate-couple.webp',
-  //   '/images/gallery/hakodate-couple-2.webp',
-  //   '/images/gallery/hakodate-couple-3.webp',
-  //   '/images/gallery/hakodate-family.webp',
-  // ];
-
   const heroImage = '/images/hakodate_wedding_kimono.webp';
   const galleryImages = [
     '/images/hakodate_wedding_kimono.webp',
@@ -64,7 +53,7 @@ export default function HakodatePage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Hakodate</h1>
             <div className="flex items-center justify-center gap-2 text-lg">
               <MapPin className="h-5 w-5" />
-              <span>北海道の地図アイコンを設置してマップアイコンで場所を示す</span>
+              <span>Click on the map icon to view Hakodate&apos;s location in Hokkaido</span>
             </div>
           </motion.div>
         </div>

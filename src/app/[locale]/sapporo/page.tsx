@@ -10,17 +10,6 @@ import { motion } from 'framer-motion';
 import { MapPin, Camera, Heart, Sparkles } from 'lucide-react';
 
 export default function SapporoPage() {
-  // TODO: 実際の画像ファイルが配置されたら以下のコメントアウトを解除
-  // const heroImage = '/images/cities/sapporo-hero.webp';
-  // const galleryImages = [
-  //   '/images/gallery/sapporo-wedding-summer.webp',
-  //   '/images/gallery/sapporo-wedding-summer-1.webp',
-  //   '/images/gallery/sapporo-night-winter.webp',
-  //   '/images/gallery/sapporo-night-winter-2.webp',
-  //   '/images/gallery/sapporo-snow-wedding.webp',
-  //   '/images/gallery/ryo-0049.webp',
-  // ];
-
   const heroImage = '/images/sapporo_wedding_summer.webp';
   const galleryImages = [
     '/images/sapporo_wedding_summer.webp',
@@ -64,7 +53,7 @@ export default function SapporoPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Sapporo</h1>
             <div className="flex items-center justify-center gap-2 text-lg">
               <MapPin className="h-5 w-5" />
-              <span>北海道の地図アイコンを設置してマップアイコンで場所を示す</span>
+              <span>Click on the map icon to view Sapporo&apos;s location in Hokkaido</span>
             </div>
           </motion.div>
         </div>

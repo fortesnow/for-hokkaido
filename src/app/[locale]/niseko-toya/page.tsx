@@ -10,17 +10,6 @@ import { motion } from 'framer-motion';
 import { MapPin, Camera, Heart, Sparkles } from 'lucide-react';
 
 export default function NisekoToyaPage() {
-  // TODO: 実際の画像ファイルが配置されたら以下のコメントアウトを解除
-  // const heroImage = '/images/cities/niseko-hero.webp';
-  // const galleryImages = [
-  //   '/images/gallery/niseko-wedding-winter.webp',
-  //   '/images/gallery/niseko-snow-couple.webp',
-  //   '/images/gallery/niseko-snow-landscape.webp',
-  //   '/images/gallery/niseko-family-winter.webp',
-  //   '/images/gallery/niseko-couple.webp',
-  //   '/images/gallery/winter-couple.webp',
-  // ];
-
   const heroImage = '/images/niseko_wedding_winter.webp';
   const galleryImages = [
     '/images/niseko_wedding_winter.webp',
@@ -64,7 +53,7 @@ export default function NisekoToyaPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Niseko, Toya</h1>
             <div className="flex items-center justify-center gap-2 text-lg">
               <MapPin className="h-5 w-5" />
-              <span>北海道の地図アイコンを設置してマップアイコンで場所を示す</span>
+              <span>Click on the map icon to view Niseko &amp; Toya&apos;s location in Hokkaido</span>
             </div>
           </motion.div>
         </div>

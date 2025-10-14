@@ -10,17 +10,6 @@ import { motion } from 'framer-motion';
 import { MapPin, Camera, Heart, Sparkles } from 'lucide-react';
 
 export default function OtaruAsariPage() {
-  // TODO: 実際の画像ファイルが配置されたら以下のコメントアウトを解除
-  // const heroImage = '/images/cities/otaru-hero.webp';
-  // const galleryImages = [
-  //   '/images/gallery/otaru-wedding.webp',
-  //   '/images/gallery/otaru-autumn.webp',
-  //   '/images/gallery/ryo-0078.webp',
-  //   '/images/gallery/0025.webp',
-  //   '/images/gallery/shikotsu-lake-winter.webp',
-  //   '/images/gallery/biei-early-summer.webp',
-  // ];
-
   const heroImage = '/images/otaru_wedding.webp';
   const galleryImages = [
     '/images/otaru_wedding.webp',
@@ -64,7 +53,7 @@ export default function OtaruAsariPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Otaru, Asari</h1>
             <div className="flex items-center justify-center gap-2 text-lg">
               <MapPin className="h-5 w-5" />
-              <span>北海道の地図アイコンを設置してマップアイコンで場所を示す</span>
+              <span>Click on the map icon to view Otaru &amp; Asari&apos;s location in Hokkaido</span>
             </div>
           </motion.div>
         </div>
