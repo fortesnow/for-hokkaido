@@ -10,7 +10,10 @@ import { motion } from 'framer-motion';
 import { MapPin, Camera, Heart, Sparkles } from 'lucide-react';
 
 export default function HakodatePage() {
+  // ヒーロー画像
   const heroImage = '/images/hakodate_wedding_kimono.webp';
+
+  // ギャラリー画像とロケーション情報
   const galleryImages = [
     '/images/hakodate_wedding_kimono.webp',
     '/images/hakodate_proposal.webp',
@@ -20,6 +23,7 @@ export default function HakodatePage() {
     '/images/family_hakodate.webp',
   ];
 
+  // 都市の特徴
   const features = [
     'Historic harbor city with stunning night views',
     'Historic port city famous for its beautiful night views, especially from Mt. Hakodate'
@@ -36,7 +40,7 @@ export default function HakodatePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -50,10 +54,10 @@ export default function HakodatePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Hakodate</h1>
-            <div className="flex items-center justify-center gap-2 text-lg">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">Hakodate</h1>
+            <div className="flex items-center justify-center gap-2 text-lg mb-8">
               <MapPin className="h-5 w-5" />
-              <span>Click on the map icon to view Hakodate&apos;s location in Hokkaido</span>
+              <span>北海道の南端に位置する港湾都市</span>
             </div>
           </motion.div>
         </div>

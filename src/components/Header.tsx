@@ -34,8 +34,7 @@ const Header = () => {
     const currentPath = pathname.replace(/^\/(ja|en)/, '') || '/';
 
     return (
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      <Link href={currentPath as any} locale={otherLocale}>
+      <Link href={currentPath as "/vacation" | "/couple" | "/prewedding" | "/about" | "/contact" | "/faq" | "/gallery" | "/pricing" | "/booking" | "/"} locale={otherLocale}>
         <Button variant="ghost" size="sm" className="flex items-center gap-2">
           <Globe className="h-4 w-4" />
           {otherLocale === 'ja' ? '日本語' : 'English'}

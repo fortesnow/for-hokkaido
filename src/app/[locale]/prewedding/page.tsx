@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, Sparkles, Camera, MapPin, Star, Check } from 'lucide-react';
+import { MapPin, Star, Check } from 'lucide-react';
 
 export default function PreweddingPage() {
   // ヒーロー画像のカルーセル
@@ -395,10 +395,10 @@ export default function PreweddingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              ギャラリー
+              Gallery
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              私たちのプレウェディングフォトグラフィーの作品をご覧ください
+              View our beautiful pre-wedding photography portfolio
             </p>
           </motion.div>
 
@@ -430,7 +430,7 @@ export default function PreweddingPage() {
           >
             <Link href="/gallery">
               <Button size="lg" className="text-lg px-8 py-6 h-auto">
-                すべてのギャラリーを見る
+                View All Gallery
               </Button>
             </Link>
           </motion.div>

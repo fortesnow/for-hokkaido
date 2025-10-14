@@ -10,7 +10,10 @@ import { motion } from 'framer-motion';
 import { MapPin, Camera, Heart, Sparkles } from 'lucide-react';
 
 export default function FuranoBieiTomamuPage() {
+  // ヒーロー画像
   const heroImage = '/images/furano_summer.webp';
+
+  // ギャラリー画像とロケーション情報
   const galleryImages = [
     '/images/furano_summer.webp',
     '/images/biei_early_summer.webp',
@@ -20,6 +23,7 @@ export default function FuranoBieiTomamuPage() {
     '/images/ryo_0049.webp',
   ];
 
+  // 都市の特徴
   const features = [
     'Lavender fields and rolling hills in summer',
     'Beautiful lavender fields and rolling hills create stunning landscapes perfect for summer photography'
@@ -36,7 +40,7 @@ export default function FuranoBieiTomamuPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -50,10 +54,10 @@ export default function FuranoBieiTomamuPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Furano, Biei, Tomamu</h1>
-            <div className="flex items-center justify-center gap-2 text-lg">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">Furano, Biei, Tomamu</h1>
+            <div className="flex items-center justify-center gap-2 text-lg mb-8">
               <MapPin className="h-5 w-5" />
-              <span>Click on the map icon to view Furano, Biei &amp; Tomamu&apos;s location in Hokkaido</span>
+              <span>札幌から車で約2時間の花と丘のエリア</span>
             </div>
           </motion.div>
         </div>

@@ -1,17 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, MapPin, Star } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 export default function CouplePage() {
   // カテゴリ別の画像データ
-  const categoryImages = {
+  const categoryImages: Record<string, string[]> = useMemo(() => ({
     couple: [
       '/images/couple_hakodate.webp',
       '/images/couple_spring_cherry_blossom.webp',
@@ -36,7 +36,7 @@ export default function CouplePage() {
       '/images/sapporo_snow_wedding.webp',
       '/images/tomamu_spring.webp',
     ],
-  };
+  }), []);
 
   const [activeCategory, setActiveCategory] = useState('couple');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -50,7 +50,7 @@ export default function CouplePage() {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [activeCategory]);
+  }, [activeCategory, categoryImages]);
 
   // ギャラリー画像データ
   const galleryImages = [
