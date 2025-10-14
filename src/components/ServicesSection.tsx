@@ -51,7 +51,7 @@ const ServicesSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -65,30 +65,30 @@ const ServicesSection = () => {
                 className="group"
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md">
-                  <CardHeader className="text-center pb-4">
-                    <div className={`w-16 h-16 mx-auto mb-4 rounded-full ${service.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className={`h-8 w-8 ${service.color}`} />
+                  <CardHeader className="text-center pb-3">
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 rounded-full ${service.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className={`h-6 w-6 sm:h-8 sm:w-8 ${service.color}`} />
                     </div>
-                    <CardTitle className="text-xl md:text-2xl">
+                    <CardTitle className="text-lg sm:text-xl md:text-2xl">
                       {t(`${service.key}.title`)}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <CardContent className="text-center px-3 sm:px-6">
+                    <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
                       {t(`${service.key}.description`)}
                     </p>
-                    
-                    <div className="space-y-2 mb-6">
+
+                    <div className="space-y-1 mb-4">
                       {(t.raw(`${service.key}.features`) as string[]).map((feature, idx) => (
-                        <div key={idx} className="flex items-center justify-center gap-2 text-sm">
-                          <div className={`w-1.5 h-1.5 rounded-full ${service.color.replace('text-', 'bg-')}`} />
+                        <div key={idx} className="flex items-center justify-center gap-2 text-xs sm:text-sm">
+                          <div className={`w-1 h-1 rounded-full ${service.color.replace('text-', 'bg-')}`} />
                           {feature}
                         </div>
                       ))}
                     </div>
 
                     <Link href={service.href as '/'}>
-                      <Button className="w-full group-hover:scale-105 transition-transform duration-300">
+                      <Button className="w-full text-sm sm:text-base py-2 sm:py-3 group-hover:scale-105 transition-transform duration-300">
                         {common('learnMore')}
                       </Button>
                     </Link>

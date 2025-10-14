@@ -14,22 +14,22 @@ const SeasonCards = () => {
   const seasons = [
     {
       key: 'spring',
-      image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2070&auto=format&fit=crop',
+      image: '/images/tomamu_spring.webp', // トマム春
       gradient: 'from-pink-500/20 to-green-500/20'
     },
     {
       key: 'summer',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop',
+      image: '/images/furano_summer.webp', // 富良野夏
       gradient: 'from-blue-500/20 to-purple-500/20'
     },
     {
       key: 'autumn',
-      image: 'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?q=80&w=2070&auto=format&fit=crop',
+      image: '/images/otaru_autumn.webp', // 小樽秋
       gradient: 'from-orange-500/20 to-red-500/20'
     },
     {
       key: 'winter',
-      image: 'https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?q=80&w=2070&auto=format&fit=crop',
+      image: '/images/niseko_snow_landscape.webp', // ニセコ雪景色
       gradient: 'from-blue-400/20 to-cyan-400/20'
     }
   ];
@@ -52,7 +52,7 @@ const SeasonCards = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {seasons.map((season, index) => (
             <motion.div
               key={season.key}

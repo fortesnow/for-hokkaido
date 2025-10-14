@@ -1,89 +1,89 @@
 {
   "navigation": {
-    "home": "ホーム",
-    "vacation": "バケーション撮影",
-    "couple": "カップル・プロポーズ",
-    "prewedding": "前撮り",
-    "destinations": "撮影地",
-    "gallery": "ギャラリー",
-    "pricing": "料金",
-    "booking": "予約する",
-    "about": "私たちについて",
-    "faq": "よくある質問",
-    "contact": "お問い合わせ"
+    "home": "Home",
+    "vacation": "Vacation Photography",
+    "couple": "Couple & Proposal",
+    "prewedding": "Pre-wedding",
+    "destinations": "Destinations",
+    "gallery": "Gallery",
+    "pricing": "Pricing",
+    "booking": "Book Now",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact"
   },
   "common": {
-    "learnMore": "詳しく見る",
-    "bookNow": "今すぐ予約",
-    "contactUs": "お問い合わせ",
-    "viewGallery": "ギャラリーを見る",
-    "chooseYourDestination": "撮影地を選ぶ",
-    "getQuote": "見積もりを取る",
-    "hours": "時間",
-    "from": "〜",
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "contactUs": "Contact Us",
+    "viewGallery": "View Gallery",
+    "chooseYourDestination": "Choose Your Destination",
+    "getQuote": "Get Quote",
+    "hours": "hours",
+    "from": "From",
     "yen": "¥",
     "usd": "$"
   },
   "home": {
     "hero": {
-      "title": "北海道四季フォトグラフィー",
-      "subtitle": "北海道の美しい四季とともに、あなたの大切な瞬間を写真に残しませんか",
-      "cta": "撮影地を選ぶ"
+      "title": "Four Season Photography in HOKKAIDO",
+      "subtitle": "Capture your precious moments with the stunning beauty of Hokkaido's changing seasons",
+      "cta": "Choose Your Destination"
     },
     "seasons": {
-      "title": "北海道の四季",
-      "subtitle": "それぞれの季節の美しさを体験してください",
+      "title": "Four Seasons of Hokkaido",
+      "subtitle": "Experience the unique beauty of each season",
       "spring": {
-        "title": "春",
-        "description": "桜と新緑がロマンチックな雰囲気を演出します"
+        "title": "Spring",
+        "description": "Cherry blossoms and fresh greenery create a romantic atmosphere"
       },
       "summer": {
-        "title": "夏",
-        "description": "ラベンダー畑と青空が鮮やかな写真を彩ります"
+        "title": "Summer",
+        "description": "Flower fields and clear blue skies for vibrant photography"
       },
       "autumn": {
-        "title": "秋",
-        "description": "黄金の紅葉が完璧な背景を作り出します"
+        "title": "Autumn",
+        "description": "Golden leaves and warm colors paint the perfect backdrop"
       },
       "winter": {
-        "title": "冬",
-        "description": "雪化粧した風景が魔法のような冬の世界を創造します"
+        "title": "Winter",
+        "description": "Snow-covered landscapes create magical winter wonderland scenes"
       }
     },
     "services": {
-      "title": "撮影サービス",
+      "title": "Photography Services",
       "vacation": {
-        "title": "バケーション撮影",
-        "description": "家族旅行の思い出をプロの写真で残しませんか",
-        "features": ["家族写真", "一人旅", "グループ写真"]
+        "title": "Vacation Photography",
+        "description": "Capture your vacation memories with professional photography",
+        "features": ["Family Photos", "Solo Travel", "Group Photos", "Birthday", "Anniversary"]
       },
       "couple": {
-        "title": "カップル・プロポーズ",
-        "description": "ロマンチックな撮影セッションとサプライズプロポーズの企画",
-        "features": ["ロマンチック撮影", "プロポーズ企画", "婚約写真"]
+        "title": "Couple & Proposal",
+        "description": "Romantic photography sessions and surprise proposal planning",
+        "features": ["Romantic & Stylish Shoots", "Proposal Planning", "Engagement Photos"]
       },
       "prewedding": {
-        "title": "前撮り",
-        "description": "美しいロケーションでの和装・洋装前撮り撮影",
-        "features": ["和装撮影", "洋装撮影", "複数ロケーション"]
+        "title": "Pre-wedding",
+        "description": "Traditional and modern pre-wedding photography in stunning locations",
+        "features": ["Modern Style", "Traditional Kimono", "Multiple Locations"]
       }
     },
     "about": {
-      "title": "SHIKI Photography について",
-      "description": "私たちは北海道の四季の美しさを撮影することに情熱を注ぐ地元のフォトグラファーです。最高のロケーションと完璧なタイミングの深い知識で、忘れられない思い出の創造をお手伝いします。",
+      "title": "About SHIKI Photography",
+      "description": "We are local photographers passionate about capturing the beauty of Hokkaido's four seasons. With deep knowledge of the best locations and perfect timing, we help you create unforgettable memories.",
       "whyUs": {
-        "title": "選ばれる理由",
+        "title": "Why Choose Us?",
         "local": {
-          "title": "地元の専門知識",
-          "description": "北海道の最高の撮影地と季節のタイミングに関する深い知識"
+          "title": "Local Expertise",
+          "description": "Deep knowledge of Hokkaido's best photography locations and seasonal timing"
         },
         "multilingual": {
-          "title": "多言語対応",
-          "description": "英語と日本語での専門的なサービス"
+          "title": "Multilingual Support",
+          "description": "Professional service in both English and Japanese"
         },
         "seasonal": {
-          "title": "四季の専門家",
-          "description": "各季節の最適な時期と場所に関する専門的なガイダンス"
+          "title": "Seasonal Specialists",
+          "description": "Expert guidance on the best times and locations for each season"
         }
       }
     }
@@ -101,29 +101,48 @@
       "akan": "阿寒湖"
     }
   },
+  "vacation": {
+    "title": "Vacation Photography",
+    "subtitle": "Capture your vacation memories with professional photography",
+    "hero": {
+      "title": "Vacation Photography",
+      "description": "Capture your precious vacation memories with professional photography services"
+    },
+    "categories": {
+      "family": "Family Photos",
+      "solo": "Solo Travel",
+      "group": "Group Photos",
+      "birthday": "Birthday",
+      "anniversary": "Anniversary"
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Travel fees and other optional charges are detailed below. Pricing page has been removed."
+    }
+  },
   "booking": {
-    "title": "撮影セッションを予約する",
-    "subtitle": "あなたのビジョンをお聞かせください。完璧な写真の撮影をお手伝いします",
+    "title": "Book Your Photography Session",
+    "subtitle": "Tell us about your vision and we'll help you create the perfect photos",
     "form": {
-      "name": "お名前",
-      "email": "メールアドレス",
-      "phone": "電話番号",
-      "preferredDate": "希望日",
-      "alternativeDate": "代替日",
-      "numberOfPeople": "人数",
-      "sessionType": "撮影タイプ",
-      "location": "希望撮影地",
-      "language": "希望言語",
-      "specialRequests": "特別なご要望",
-      "submit": "リクエストを送信"
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "preferredDate": "Preferred Date",
+      "alternativeDate": "Alternative Date",
+      "numberOfPeople": "Number of People",
+      "sessionType": "Session Type",
+      "location": "Preferred Location",
+      "language": "Preferred Language",
+      "specialRequests": "Special Requests",
+      "submit": "Submit Request"
     }
   },
   "footer": {
     "company": "SHIKI Photography HOKKAIDO",
-    "description": "北海道の四季の美しさを捉えるプロフェッショナル写真サービス",
-    "quickLinks": "クイックリンク",
-    "contact": "連絡先",
-    "followUs": "フォローしてください",
+    "description": "Professional photography services capturing the beauty of Hokkaido's four seasons",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Information",
+    "followUs": "Follow Us",
     "copyright": "© 2024 SHIKI Photography HOKKAIDO. All rights reserved."
   }
 }

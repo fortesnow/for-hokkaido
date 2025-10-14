@@ -18,7 +18,6 @@ const Header = () => {
     { href: '/vacation', label: t('vacation') },
     { href: '/couple', label: t('couple') },
     { href: '/prewedding', label: t('prewedding') },
-    { href: '/destinations', label: t('destinations') },
     { href: '/gallery', label: t('gallery') },
     { href: '/pricing', label: t('pricing') },
     { href: '/about', label: t('about') },
@@ -26,12 +25,17 @@ const Header = () => {
   ];
 
   const LanguageSwitcher = () => {
-    const currentLocale = typeof window !== 'undefined' && pathname.startsWith('/ja') ? 'ja' : 'en';
+    // パスから現在のロケールを判定（サーバー/クライアント両方で動作）
+    const isJaPath = pathname.startsWith('/ja');
+    const currentLocale = isJaPath ? 'ja' : 'en';
     const otherLocale = currentLocale === 'ja' ? 'en' : 'ja';
-    const currentPath = typeof window !== 'undefined' ? pathname.replace(/^\/ja/, '') || '/' : '/';
-    
+
+    // パスからロケールプレフィックスを除去
+    const currentPath = pathname.replace(/^\/(ja|en)/, '') || '/';
+
     return (
-      <Link href={currentPath as '/'} locale={otherLocale}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <Link href={currentPath as any} locale={otherLocale}>
         <Button variant="ghost" size="sm" className="flex items-center gap-2">
           <Globe className="h-4 w-4" />
           {otherLocale === 'ja' ? '日本語' : 'English'}
@@ -52,7 +56,7 @@ const Header = () => {
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold text-primary"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary tracking-wider"
             >
               SHIKI
             </motion.div>

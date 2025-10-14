@@ -1,26 +1,56 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   const t = useTranslations('home.hero');
 
+  // スライドショー用の画像配列（実際のプロジェクト画像を使用）
+  const heroImages = [
+    "/images/otaru_wedding.webp", // 小樽ウェディング
+    "/images/tomamu_spring.webp", // トマム春
+    "/images/sapporo_wedding_summer.webp", // 札幌ウェディング夏
+    "/images/otaru_autumn.webp", // 小樽秋
+    "/images/niseko_snow_landscape.webp", // ニセコ雪景色
+    "/images/hakodate_wedding_kimono.webp", // 函館ウェディング和装
+    "/images/furano_summer.webp", // 富良野夏
+    "/images/couple_spring_cherry_blossom.webp", // カップル春桜
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // 自動スライドショー
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 4000); // 4秒ごとに切り替え
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video/Image */}
+      {/* Background Slideshow */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070&auto=format&fit=crop')"
-            }}
-          />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentImageIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: `url('${heroImages[currentImageIndex]}')`
+              }}
+            />
+          </AnimatePresence>
           <div className="absolute inset-0 bg-black/30" />
         </div>
       </div>

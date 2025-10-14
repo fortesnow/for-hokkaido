@@ -54,18 +54,18 @@
       "title": "Photography Services",
       "vacation": {
         "title": "Vacation Photography",
-        "description": "Capture your family vacation memories with professional photography",
-        "features": ["Family Photos", "Solo Travel", "Group Photos"]
+        "description": "Capture your vacation memories with professional photography",
+        "features": ["Family Photos", "Solo Travel", "Group Photos", "Birthday", "Anniversary"]
       },
       "couple": {
         "title": "Couple & Proposal",
         "description": "Romantic photography sessions and surprise proposal planning",
-        "features": ["Romantic Shoots", "Proposal Planning", "Engagement Photos"]
+        "features": ["Romantic & Stylish Shoots", "Proposal Planning", "Engagement Photos"]
       },
       "prewedding": {
         "title": "Pre-wedding",
         "description": "Traditional and modern pre-wedding photography in stunning locations",
-        "features": ["Traditional Kimono", "Modern Style", "Multiple Locations"]
+        "features": ["Modern Style", "Traditional Kimono", "Multiple Locations"]
       }
     },
     "about": {
@@ -86,6 +86,10 @@
           "description": "Expert guidance on the best times and locations for each season"
         }
       }
+    },
+    "map": {
+      "title": "Featured Destinations",
+      "description": "Click on destinations to explore"
     }
   },
   "destinations": {
@@ -99,6 +103,25 @@
       "niseko": "Niseko",
       "shikotsu": "Lake Shikotsu",
       "akan": "Lake Akan"
+    }
+  },
+  "vacation": {
+    "title": "Vacation Photography",
+    "subtitle": "Capture your vacation memories with professional photography",
+    "hero": {
+      "title": "Vacation Photography",
+      "description": "Capture your precious vacation memories with professional photography services"
+    },
+    "categories": {
+      "family": "Family Photos",
+      "solo": "Solo Travel",
+      "group": "Group Photos",
+      "birthday": "Birthday",
+      "anniversary": "Anniversary"
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Travel fees and other optional charges are detailed below. Pricing page has been removed."
     }
   },
   "booking": {
