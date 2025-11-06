@@ -147,32 +147,36 @@ const HokkaidoMap = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl py-6 px-4 h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md"
+                className="bg-card text-card-foreground rounded-xl p-6 hover:shadow-lg transition-all duration-300 border-0 shadow-md"
               >
-                <div className="relative w-full h-48 rounded-xl overflow-hidden">
-                  <Image
-                    src={city.imageSrc}
-                    alt={city.imageAlt}
-                    width={1200}
-                    height={600}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col gap-4">
-                  <Badge variant="outline" className="w-fit bg-background">
-                    {city.badge}
-                  </Badge>
-                  <h3 className="text-2xl md:text-3xl font-semibold">
-                    {city.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm md:text-base">
-                    {city.description}
-                  </p>
-                  <Link href={city.href as '/'}>
-                    <Button className="mt-2.5 w-fit gap-2" size="lg">
-                      Explore {city.name}
-                    </Button>
-                  </Link>
+                <div className="grid grid-cols-2 gap-4 items-center">
+                  {/* Left: Text Content */}
+                  <div className="flex flex-col gap-4">
+                    <Badge variant="outline" className="w-fit bg-background">
+                      {city.badge}
+                    </Badge>
+                    <h3 className="text-xl font-semibold">
+                      {city.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {city.description}
+                    </p>
+                    <Link href={city.href as '/'}>
+                      <Button className="mt-2.5 w-fit gap-2 text-sm px-4 py-2 h-auto" size="sm">
+                        Explore {city.name}
+                      </Button>
+                    </Link>
+                  </div>
+                  {/* Right: Image */}
+                  <div className="relative w-full h-32 rounded-xl overflow-hidden">
+                    <Image
+                      src={city.imageSrc}
+                      alt={city.imageAlt}
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </motion.div>
             ))}
