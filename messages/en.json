@@ -26,7 +26,7 @@
   },
   "home": {
     "hero": {
-      "title": "Four Season Photography in HOKKAIDO",
+      "title": "SHIKI Photography HOKKAIDO",
       "subtitle": "Capture your precious moments with the stunning beauty of Hokkaido's changing seasons",
       "cta": "Choose Your Destination"
     },
@@ -71,6 +71,12 @@
     "about": {
       "title": "About SHIKI Photography",
       "description": "We are local photographers passionate about capturing the beauty of Hokkaido's four seasons. With deep knowledge of the best locations and perfect timing, we help you create unforgettable memories.",
+      "story": {
+        "title": "Our Story",
+        "paragraph1": "SHIKI Photography was born from a deep love for Hokkaido's breathtaking natural beauty and the desire to share it with visitors from around the world. \"Shiki\" (四季) means \"four seasons\" in Japanese, representing our commitment to capturing the unique charm of each season in Hokkaido.",
+        "paragraph2": "As local photographers, we have witnessed countless sunrises over the Tokachi Plains, explored hidden hot springs in the mountains, and experienced the magic of Hokkaido's powder snow. This intimate knowledge of our homeland allows us to guide you to the most stunning locations at the perfect moments.",
+        "paragraph3": "Our mission is to create not just beautiful photographs, but lasting memories that tell the story of your time in Hokkaido. Whether you're celebrating a proposal, enjoying a family vacation, or preparing for your wedding, we're here to capture those precious moments with artistry and care."
+      },
       "whyUs": {
         "title": "Why Choose Us?",
         "local": {
@@ -85,6 +91,52 @@
           "title": "Seasonal Specialists",
           "description": "Expert guidance on the best times and locations for each season"
         }
+      },
+      "values": {
+        "title": "Our Values",
+        "subtitle": "The principles that guide everything we do",
+        "professional": {
+          "title": "Professional Excellence",
+          "description": "We bring years of professional photography experience and technical expertise to every session."
+        },
+        "passion": {
+          "title": "Passion for Hokkaido",
+          "description": "Born and raised in Hokkaido, we know the hidden gems and perfect timing for every season."
+        },
+        "personal": {
+          "title": "Personal Connection",
+          "description": "We take time to understand your vision and create a comfortable, enjoyable experience."
+        },
+        "quality": {
+          "title": "Quality Guarantee",
+          "description": "Every photo is carefully edited and delivered to meet our high standards of excellence."
+        }
+      },
+      "achievements": {
+        "title": "Our Journey in Numbers",
+        "subtitle": "Every photo tells a story, every client becomes part of our family",
+        "clients": {
+          "number": "500+",
+          "label": "Happy Clients"
+        },
+        "locations": {
+          "number": "50+",
+          "label": "Locations Covered"
+        },
+        "years": {
+          "number": "4",
+          "label": "Years Experience"
+        },
+        "photos": {
+          "number": "15000+",
+          "label": "Photos Delivered"
+        }
+      },
+      "cta": {
+        "title": "Ready to Create Memories?",
+        "description": "Let us capture your special moments against the stunning backdrop of Hokkaido's natural beauty.",
+        "button": "Book Your Session",
+        "gallery": "View Our Work"
       }
     },
     "map": {

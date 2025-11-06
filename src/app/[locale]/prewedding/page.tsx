@@ -31,24 +31,24 @@ export default function PreweddingPage() {
 
   const services = [
     {
-      title: 'ローカルの強み',
-      description: '素敵なロケーションをご案内します',
+      title: 'Local Expertise',
+      description: 'We guide you to beautiful locations',
     },
     {
-      title: 'The best wedding photographers',
-      description: 'が撮ります',
+      title: 'The Best Wedding Photographers',
+      description: 'Capture your special moments',
     },
     {
-      title: 'top ブライダル make up artist',
-      description: 'が担当します',
+      title: 'Top Bridal Makeup Artists',
+      description: 'Professional styling services',
     },
     {
-      title: 'ローカルのドレスショップ',
-      description: 'の衣装を選べます',
+      title: 'Local Dress Shops',
+      description: 'Choose from beautiful costumes',
     },
     {
-      title: '着物スタイル',
-      description: 'もできます',
+      title: 'Kimono Style',
+      description: 'Traditional Japanese style available',
     },
   ];
 
@@ -144,52 +144,52 @@ export default function PreweddingPage() {
 
   const optionalServices = [
     {
-      name: '追加ロケーション',
+      name: 'Additional Location',
       price: '¥15,000',
       priceUsd: '$110',
-      description: '1箇所追加あたり',
+      description: 'Per additional location',
     },
     {
-      name: '追加撮影時間',
+      name: 'Additional Shooting Time',
       price: '¥10,000',
       priceUsd: '$75',
-      description: '1時間あたり',
+      description: 'Per hour',
     },
     {
-      name: '札幌・小樽圏外出張費',
+      name: 'Travel Fee (Outside Sapporo/Otaru)',
       price: '¥5,000',
       priceUsd: '$40',
-      description: '片道あたり',
+      description: 'One way',
     },
     {
-      name: '函館・ニセコ圏外出張費',
+      name: 'Travel Fee (Hakodate/Niseko Area)',
       price: '¥10,000',
       priceUsd: '$75',
-      description: '片道あたり',
+      description: 'One way',
     },
     {
-      name: '追加衣装レンタル',
+      name: 'Additional Costume Rental',
       price: '¥20,000',
       priceUsd: '$150',
-      description: 'ドレスまたは着物1着あたり',
+      description: 'Per dress or kimono',
     },
     {
-      name: 'ヘアメイクアーティスト指名料',
+      name: 'Top Stylist Selection Fee',
       price: '¥15,000',
       priceUsd: '$110',
-      description: 'トップスタイリスト指名時',
+      description: 'For top makeup artist',
     },
     {
-      name: 'プレミアムレタッチ',
+      name: 'Premium Retouch',
       price: '¥5,000',
       priceUsd: '$40',
-      description: '1カットあたり',
+      description: 'Per photo',
     },
     {
-      name: '当日スナップ写真',
+      name: 'Wedding Day Snapshots',
       price: '¥10,000',
       priceUsd: '$75',
-      description: '挙式・披露宴の撮影',
+      description: 'Ceremony & reception photography',
     },
   ];
 
@@ -231,7 +231,7 @@ export default function PreweddingPage() {
               </h1>
 
               <p className="text-lg md:text-xl mb-8 max-w-2xl leading-relaxed">
-                美しい自然の景色の中でドレスや着物を着て撮影できます。
+                Capture your precious moments in beautiful natural settings, wearing dresses or kimonos.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -260,7 +260,7 @@ export default function PreweddingPage() {
                   Pre-wedding Photography Styles
                 </h3>
                 <p className="text-white/90 leading-relaxed">
-                  美しい自然の景色の中でドレスや着物を着て撮影できます。
+                  Capture your precious moments in beautiful natural settings, wearing dresses or kimonos.
                 </p>
               </div>
             </motion.div>
@@ -295,7 +295,7 @@ export default function PreweddingPage() {
               Why choose our wedding photography sessions
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              ローカルの強みで素敵なロケーションをご案内します
+              We guide you to beautiful locations with our local expertise
             </p>
           </motion.div>
 
@@ -528,10 +528,10 @@ export default function PreweddingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              オプション料金
+              Optional Services
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              必要に応じて追加できるオプションサービス
+              Additional services available upon request
             </p>
           </motion.div>
 
@@ -568,18 +568,60 @@ export default function PreweddingPage() {
             ))}
           </div>
 
+          {/* Optional Services */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-center mt-12"
+            className="mt-16"
           >
-            <Link href="/booking">
-              <Button size="lg" className="text-lg px-8 py-6 h-auto">
-                今すぐ予約する
-              </Button>
-            </Link>
+            <div className="bg-gray-50 rounded-lg p-8">
+              <h3 className="text-2xl font-semibold mb-6 text-center">Optional Services & Travel Fees</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <h4 className="font-semibold mb-2">Travel Fees (Outside Sapporo)</h4>
+                  <p className="text-muted-foreground">¥5,000 - ¥15,000</p>
+                  <p className="text-sm text-muted-foreground">Depending on distance</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-semibold mb-2">Early Morning/Late Evening</h4>
+                  <p className="text-muted-foreground">¥3,000</p>
+                  <p className="text-sm text-muted-foreground">Before 6 AM or after 8 PM</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-semibold mb-2">Additional Location</h4>
+                  <p className="text-muted-foreground">¥5,000</p>
+                  <p className="text-sm text-muted-foreground">Per additional location</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-semibold mb-2">Extra Photo Editing</h4>
+                  <p className="text-muted-foreground">¥1,000</p>
+                  <p className="text-sm text-muted-foreground">Per additional photo</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-semibold mb-2">RAW Data</h4>
+                  <p className="text-muted-foreground">¥10,000</p>
+                  <p className="text-sm text-muted-foreground">Per session</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-semibold mb-2">Cancellation Fee (3 days)</h4>
+                  <p className="text-muted-foreground">50% of session fee</p>
+                  <p className="text-sm text-muted-foreground">If cancelled within 3 days</p>
+                </div>
+              </div>
+
+              <div className="text-center mt-8">
+                <p className="text-sm text-muted-foreground mb-4">
+                  * All prices are subject to change. Please contact us for detailed quotes.
+                </p>
+                <Link href="/booking">
+                  <Button size="lg" className="text-lg px-8 py-6 h-auto">
+                    Book Now
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>

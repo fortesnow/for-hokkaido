@@ -165,36 +165,36 @@ const VacationPlans = () => {
           className="text-center mt-12"
         >
           <div className="bg-gray-50 rounded-lg p-6 mb-6">
-            <h3 className="text-xl font-semibold mb-4">オプション料金</h3>
+            <h3 className="text-xl font-semibold mb-4">Optional Fees</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
               <div className="text-left">
-                <p className="font-medium">札幌市外への出張料</p>
-                <p className="text-muted-foreground">¥5,000〜¥15,000（距離による）</p>
+                <p className="font-medium">Travel Fee (Outside Sapporo)</p>
+                <p className="text-muted-foreground">¥5,000 - ¥15,000 (depending on distance)</p>
               </div>
               <div className="text-left">
-                <p className="font-medium">早朝・深夜料金</p>
-                <p className="text-muted-foreground">¥3,000（6時前・20時以降）</p>
+                <p className="font-medium">Early Morning/Late Evening Fee</p>
+                <p className="text-muted-foreground">¥3,000 (before 6 AM or after 8 PM)</p>
               </div>
               <div className="text-left">
-                <p className="font-medium">追加ロケーション</p>
-                <p className="text-muted-foreground">¥5,000/1箇所</p>
+                <p className="font-medium">Additional Location</p>
+                <p className="text-muted-foreground">¥5,000 per location</p>
               </div>
               <div className="text-left">
-                <p className="font-medium">写真追加編集</p>
-                <p className="text-muted-foreground">¥1,000/枚</p>
+                <p className="font-medium">Extra Photo Editing</p>
+                <p className="text-muted-foreground">¥1,000 per photo</p>
               </div>
               <div className="text-left">
-                <p className="font-medium">RAWデータ提供</p>
-                <p className="text-muted-foreground">¥10,000/セッション</p>
+                <p className="font-medium">RAW Data</p>
+                <p className="text-muted-foreground">¥10,000 per session</p>
               </div>
               <div className="text-left">
-                <p className="font-medium">キャンセル料（3日前）</p>
+                <p className="font-medium">Cancellation Fee (3 days)</p>
                 <p className="text-muted-foreground">50% of session fee</p>
               </div>
             </div>
           </div>
           <p className="text-muted-foreground mb-4">
-            * 上記料金は予告なく変更される場合があります。詳細はお問い合わせください。
+            * Prices are subject to change without notice. Please contact us for details.
           </p>
           <Link href="/contact">
             <Button variant="outline" size="lg">

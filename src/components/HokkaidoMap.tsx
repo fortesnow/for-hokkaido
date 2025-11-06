@@ -1,20 +1,71 @@
 'use client';
 
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { motion } from 'framer-motion';
-import { MapPin } from 'lucide-react';
+import { MapPin, Building2, Mountain, Flower2, Ship } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const HokkaidoMap = () => {
-
   const cities = [
-    { name: 'Sapporo', position: 'top-4 left-1/2 transform -translate-x-1/2', href: '/sapporo' },
-    { name: 'Otaru, Asari', position: 'top-8 left-1/4', href: '/otaru-asari' },
-    { name: 'Niseko, Toya', position: 'top-1/2 left-1/3', href: '/niseko-toya' },
-    { name: 'Furano, Biei, Tomamu', position: 'top-1/3 right-8', href: '/furano-biei-tomamu' },
-    { name: 'Hakodate', position: 'bottom-8 left-8', href: '/hakodate' },
+    {
+      value: 'sapporo',
+      name: 'Sapporo',
+      icon: <Building2 className="h-auto w-4 shrink-0" />,
+      href: '/sapporo',
+      badge: 'Urban Photography',
+      title: 'Sapporo',
+      description: 'Urban photography with modern architecture and city landscapes',
+      imageSrc: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1200&auto=format&fit=crop',
+      imageAlt: 'Sapporo cityscape',
+    },
+    {
+      value: 'otaru-asari',
+      name: 'Otaru, Asari',
+      icon: <Ship className="h-auto w-4 shrink-0" />,
+      href: '/otaru-asari',
+      badge: 'Historic Port',
+      title: 'Otaru, Asari',
+      description: 'Historic port city with scenic coastal views',
+      imageSrc: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop',
+      imageAlt: 'Otaru canal',
+    },
+    {
+      value: 'niseko-toya',
+      name: 'Niseko, Toya',
+      icon: <Mountain className="h-auto w-4 shrink-0" />,
+      href: '/niseko-toya',
+      badge: 'Ski Resorts',
+      title: 'Niseko, Toya',
+      description: 'World-class ski resorts and natural hot springs',
+      imageSrc: 'https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?q=80&w=1200&auto=format&fit=crop',
+      imageAlt: 'Niseko ski resort',
+    },
+    {
+      value: 'furano-biei-tomamu',
+      name: 'Furano, Biei, Tomamu',
+      icon: <Flower2 className="h-auto w-4 shrink-0" />,
+      href: '/furano-biei-tomamu',
+      badge: 'Natural Beauty',
+      title: 'Furano, Biei, Tomamu',
+      description: 'Lavender fields and rolling hills in summer',
+      imageSrc: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop',
+      imageAlt: 'Furano lavender fields',
+    },
+    {
+      value: 'hakodate',
+      name: 'Hakodate',
+      icon: <MapPin className="h-auto w-4 shrink-0" />,
+      href: '/hakodate',
+      badge: 'Historic Harbor',
+      title: 'Hakodate',
+      description: 'Historic harbor city with stunning night views',
+      imageSrc: 'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?q=80&w=1200&auto=format&fit=crop',
+      imageAlt: 'Hakodate night view',
+    },
   ];
 
   return (
@@ -31,106 +82,102 @@ const HokkaidoMap = () => {
             Featured Destinations
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            地名をタップ→各都市のページへ遷移
+            Tap on destinations to navigate to each city&apos;s page
           </p>
         </motion.div>
 
-        {/* Hokkaido Map Container */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="relative"
-        >
-          {/* Simple Hokkaido Shape */}
-          <Card className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-green-50 border-2 border-blue-200">
-            <CardContent className="p-8 md:p-12">
-              {/* Hokkaido Island Shape (simplified) */}
-              <div className="relative w-full h-96 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg border border-blue-200">
-                {/* Map Background Pattern */}
-                <div className="absolute inset-0 opacity-30">
-                  <div className="w-full h-full bg-gradient-to-br from-green-200 via-blue-200 to-green-300"></div>
-                </div>
+        {/* Desktop View - Tabs */}
+        <div className="hidden md:block">
+          <Tabs defaultValue={cities[0].value} className="mt-8">
+            <TabsList className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-10 w-full">
+              {cities.map((city) => (
+                <TabsTrigger
+                  key={city.value}
+                  value={city.value}
+                  className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted-foreground data-[state=active]:bg-muted data-[state=active]:text-primary"
+                >
+                  {city.icon} {city.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
 
-                {/* City Markers */}
-                {cities.map((city, index) => (
-                  <motion.div
-                    key={city.name}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className={`absolute ${city.position}`}
-                  >
+            <div className="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-muted/70 p-6 lg:p-16">
+              {cities.map((city) => (
+                <TabsContent
+                  key={city.value}
+                  value={city.value}
+                  className="grid place-items-center gap-20 lg:grid-cols-2 lg:gap-10"
+                >
+                  <div className="flex flex-col gap-5">
+                    <Badge variant="outline" className="w-fit bg-background">
+                      {city.badge}
+                    </Badge>
+                    <h3 className="text-3xl font-semibold lg:text-5xl">
+                      {city.title}
+                    </h3>
+                    <p className="text-muted-foreground lg:text-lg">
+                      {city.description}
+                    </p>
                     <Link href={city.href as '/'}>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="bg-white/90 hover:bg-white border-blue-300 hover:border-blue-400 text-blue-700 hover:text-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
-                      >
-                        <MapPin className="w-4 h-4 mr-1" />
-                        {city.name}
+                      <Button className="mt-2.5 w-fit gap-2" size="lg">
+                        Explore {city.name}
                       </Button>
                     </Link>
-                  </motion.div>
-                ))}
-
-                {/* Hokkaido Label */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white/80 px-4 py-2 rounded-lg border border-blue-200 shadow-md">
-                    <span className="text-blue-800 font-semibold">HOKKAIDO</span>
                   </div>
-                </div>
-              </div>
+                  <Image
+                    src={city.imageSrc}
+                    alt={city.imageAlt}
+                    width={1200}
+                    height={800}
+                    className="rounded-xl w-full h-auto object-cover"
+                  />
+                </TabsContent>
+              ))}
+            </div>
+          </Tabs>
+        </div>
 
-              {/* Legend */}
-              <div className="absolute bottom-4 right-4 bg-white/90 p-3 rounded-lg border border-gray-200 shadow-md">
-                <p className="text-sm text-gray-600">Click on destinations to explore</p>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        {/* City Cards Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-12"
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        {/* Mobile View - Stacked Cards */}
+        <div className="block md:hidden">
+          <div className="space-y-8">
             {cities.map((city, index) => (
               <motion.div
-                key={city.name}
+                key={city.value}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="group"
+                className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl py-6 px-4 h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md"
               >
-                <Link href={city.href as '/'}>
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 shadow-md group-hover:shadow-xl">
-                    <CardContent className="p-4 text-center">
-                      <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
-                        {city.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 mt-2">
-                        {index === 0 && "Urban photography with modern architecture and city landscapes"}
-                        {index === 1 && "Historic port city with scenic coastal views"}
-                        {index === 2 && "World-class ski resorts and natural hot springs"}
-                        {index === 3 && "Lavender fields and rolling hills in summer"}
-                        {index === 4 && "Historic harbor city with stunning night views"}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </Link>
+                <div className="relative w-full h-48 rounded-xl overflow-hidden">
+                  <Image
+                    src={city.imageSrc}
+                    alt={city.imageAlt}
+                    width={1200}
+                    height={600}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col gap-4">
+                  <Badge variant="outline" className="w-fit bg-background">
+                    {city.badge}
+                  </Badge>
+                  <h3 className="text-2xl md:text-3xl font-semibold">
+                    {city.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm md:text-base">
+                    {city.description}
+                  </p>
+                  <Link href={city.href as '/'}>
+                    <Button className="mt-2.5 w-fit gap-2" size="lg">
+                      Explore {city.name}
+                    </Button>
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

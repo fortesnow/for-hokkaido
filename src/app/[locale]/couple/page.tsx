@@ -71,7 +71,7 @@ export default function CouplePage() {
   const packages = [
     {
       category: 'couple',
-      name: 'カップル撮影',
+      name: 'Couple Photography',
       price: '¥35,000',
       priceUsd: '$250',
       duration: '2 hours',
@@ -85,7 +85,7 @@ export default function CouplePage() {
     },
     {
       category: 'proposal',
-      name: 'プロポーズ撮影',
+      name: 'Proposal Photography',
       price: '¥55,000',
       priceUsd: '$400',
       duration: '3 hours',
@@ -102,7 +102,7 @@ export default function CouplePage() {
     },
     {
       category: 'engagement',
-      name: 'エンゲージメント撮影',
+      name: 'Engagement Photography',
       price: '¥45,000',
       priceUsd: '$330',
       duration: '2.5 hours',
@@ -119,40 +119,40 @@ export default function CouplePage() {
 
   const optionalServices = [
     {
-      name: '追加ロケーション',
+      name: 'Additional Location',
       price: '¥10,000',
       priceUsd: '$75',
-      description: '1箇所追加あたり',
+      description: 'Per additional location',
     },
     {
-      name: '追加撮影時間',
+      name: 'Additional Shooting Time',
       price: '¥8,000',
       priceUsd: '$60',
-      description: '30分あたり',
+      description: 'Per 30 minutes',
     },
     {
-      name: '札幌・小樽圏外出張費',
+      name: 'Travel Fee (Outside Sapporo/Otaru)',
       price: '¥3,000',
       priceUsd: '$25',
-      description: '片道あたり',
+      description: 'One way',
     },
     {
-      name: '函館・ニセコ圏外出張費',
+      name: 'Travel Fee (Hakodate/Niseko Area)',
       price: '¥8,000',
       priceUsd: '$60',
-      description: '片道あたり',
+      description: 'One way',
     },
     {
-      name: 'サンセット/サンライズ撮影',
+      name: 'Sunset/Sunrise Photography',
       price: '¥15,000',
       priceUsd: '$110',
-      description: '特別な時間帯の撮影',
+      description: 'Special time slot photography',
     },
     {
-      name: 'プロポーズプランニング',
+      name: 'Proposal Planning',
       price: '¥20,000',
       priceUsd: '$150',
-      description: '詳細なプロポーズ企画',
+      description: 'Detailed proposal planning',
     },
   ];
 
@@ -233,8 +233,8 @@ export default function CouplePage() {
                         : 'bg-white/20 text-white hover:bg-white/30'
                     }`}
                   >
-                    {category === 'couple' ? 'カップル' :
-                     category === 'proposal' ? 'プロポーズ' : 'エンゲージメント'}
+                    {category === 'couple' ? 'Couple' :
+                     category === 'proposal' ? 'Proposal' : 'Engagement'}
                   </button>
                 ))}
               </div>
@@ -247,9 +247,9 @@ export default function CouplePage() {
                   Creating intimate and romantic memories in Hokkaido&apos;s stunning landscapes
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">カップル</span>
-                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">プロポーズ</span>
-                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">エンゲージメント</span>
+                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Couple</span>
+                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Proposal</span>
+                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Engagement</span>
                 </div>
               </div>
             </motion.div>
@@ -281,10 +281,10 @@ export default function CouplePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              ギャラリー
+              Gallery
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              私たちのカップル・プロポーズフォトグラフィーの作品をご覧ください
+              View our couple and proposal photography portfolio
             </p>
           </motion.div>
 
@@ -316,7 +316,7 @@ export default function CouplePage() {
           >
             <Link href="/gallery">
               <Button size="lg" className="text-lg px-8 py-6 h-auto">
-                すべてのギャラリーを見る
+                View All Gallery
               </Button>
             </Link>
           </motion.div>
@@ -334,10 +334,10 @@ export default function CouplePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              撮影パッケージ
+              Photography Packages
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              カップル・プロポーズ撮影に最適なパッケージをご用意しています
+              Perfect packages for couple and proposal photography
             </p>
           </motion.div>
 
@@ -355,7 +355,7 @@ export default function CouplePage() {
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                     <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                      人気
+                      Most Popular
                     </span>
                   </div>
                 )}
@@ -414,10 +414,10 @@ export default function CouplePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              オプションサービス
+              Optional Services
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              必要に応じて追加できるオプションサービス
+              Additional services available upon request
             </p>
           </motion.div>
 
@@ -463,7 +463,7 @@ export default function CouplePage() {
           >
             <Link href="/booking">
               <Button size="lg" className="text-lg px-8 py-6 h-auto">
-                今すぐ予約する
+                Book Now
               </Button>
             </Link>
           </motion.div>

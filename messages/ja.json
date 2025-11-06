@@ -26,9 +26,9 @@
   },
   "home": {
     "hero": {
-      "title": "Four Season Photography in HOKKAIDO",
-      "subtitle": "Capture your precious moments with the stunning beauty of Hokkaido's changing seasons",
-      "cta": "Choose Your Destination"
+      "title": "式フォトグラフィー北海道",
+      "subtitle": "北海道の美しい四季の中で、あなたの大切な瞬間を切り取ります",
+      "cta": "撮影地を選ぶ"
     },
     "seasons": {
       "title": "Four Seasons of Hokkaido",
@@ -71,6 +71,12 @@
     "about": {
       "title": "About SHIKI Photography",
       "description": "We are local photographers passionate about capturing the beauty of Hokkaido's four seasons. With deep knowledge of the best locations and perfect timing, we help you create unforgettable memories.",
+      "story": {
+        "title": "私たちのストーリー",
+        "paragraph1": "SHIKI Photographyは、北海道の息を呑むような自然の美しさへの深い愛情と、世界中の訪問者とそれを共有したいという願望から生まれました。「四季（しき）」は日本語で「four seasons」を意味し、北海道の各季節の独特な魅力を捉える私たちの取り組みを表しています。",
+        "paragraph2": "地元の写真家として、私たちは十勝平野の無数の日の出を目撃し、山の隠れた温泉を探索し、北海道のパウダースノーの魔法を体験してきました。この故郷への親密な知識により、私たちは最も美しい場所に完璧なタイミングでご案内できます。",
+        "paragraph3": "私たちの使命は、美しい写真を作ることだけでなく、北海道での時間の物語を語る永続的な思い出を作ることです。プロポーズを祝う、家族の休暇を楽しむ、結婚式の準備をする、どのような状況でも、私たちは芸術性と愛情をもってこれらの貴重な瞬間を捉えます。"
+      },
       "whyUs": {
         "title": "Why Choose Us?",
         "local": {
@@ -85,6 +91,52 @@
           "title": "Seasonal Specialists",
           "description": "Expert guidance on the best times and locations for each season"
         }
+      },
+      "values": {
+        "title": "私たちの価値観",
+        "subtitle": "私たちのすべての行動を導く原則",
+        "professional": {
+          "title": "プロフェッショナルな卓越性",
+          "description": "私たちは長年のプロフェッショナルな写真撮影の経験と技術的な専門知識をすべてのセッションに持ち込んでいます。"
+        },
+        "passion": {
+          "title": "北海道への情熱",
+          "description": "北海道で生まれ育った私たちは、隠れた宝石と各季節の完璧なタイミングを知っています。"
+        },
+        "personal": {
+          "title": "個人的なつながり",
+          "description": "私たちはあなたのビジョンを理解するために時間をかけ、快適で楽しい体験を作り出します。"
+        },
+        "quality": {
+          "title": "品質保証",
+          "description": "すべての写真は慎重に編集され、私たちの高い卓越性の基準を満たすために配信されます。"
+        }
+      },
+      "achievements": {
+        "title": "数字で見る私たちの歩み",
+        "subtitle": "すべての写真が物語を語り、すべてのクライアントが私たちの家族の一部になります",
+        "clients": {
+          "number": "500+",
+          "label": "Happy Clients"
+        },
+        "locations": {
+          "number": "50+",
+          "label": "Locations Covered"
+        },
+        "years": {
+          "number": "4",
+          "label": "Years Experience"
+        },
+        "photos": {
+          "number": "15000+",
+          "label": "Photos Delivered"
+        }
+      },
+      "cta": {
+        "title": "思い出を作る準備はできましたか？",
+        "description": "北海道の自然の美しさを背景に、あなたの特別な瞬間を捉えさせてください。",
+        "button": "セッションを予約する",
+        "gallery": "私たちの作品を見る"
       }
     }
   },

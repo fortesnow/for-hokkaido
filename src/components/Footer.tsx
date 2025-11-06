@@ -18,7 +18,6 @@ const Footer = () => {
     { href: '/prewedding', label: nav('prewedding') },
     { href: '/destinations', label: nav('destinations') },
     { href: '/gallery', label: nav('gallery') },
-    { href: '/about', label: nav('about') },
     { href: '/faq', label: nav('faq') },
   ];
 
@@ -67,7 +66,7 @@ const Footer = () => {
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link 
-                    href={link.href as '/vacation' | '/couple' | '/prewedding' | '/destinations' | '/gallery' | '/pricing' | '/booking' | '/about' | '/contact' | '/faq' | '/'}
+                    href={link.href as '/vacation' | '/couple' | '/prewedding' | '/destinations' | '/gallery' | '/booking' | '/contact' | '/faq' | '/'}
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {link.label}
