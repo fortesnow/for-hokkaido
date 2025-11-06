@@ -52,7 +52,7 @@ const SeasonCards = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {seasons.map((season, index) => (
             <motion.div
               key={season.key}
@@ -63,7 +63,7 @@ const SeasonCards = () => {
               whileHover={{ y: -10 }}
               className="group"
             >
-              <Card className="overflow-hidden h-96 relative cursor-pointer border-0 shadow-lg">
+              <Card className="overflow-hidden h-64 md:h-96 relative cursor-pointer border-0 shadow-lg">
                 <div className="absolute inset-0">
                   <div 
                     className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
